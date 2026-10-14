@@ -30,6 +30,9 @@ class BookRead(SQLModel):
     is_sold: bool
     user_id: int  # Foreign key to link the book to its owner (User)
 
+class BookUpdate(SQLModel):
+    is_sold: Optional[bool] = None
+    price: Optional[int] = None
 
 from models.user import User
 Book.model_rebuild()
